@@ -16,6 +16,7 @@ BuildRequires:  gcc-c++
 BuildRequires:  libusb1-devel
 BuildRequires:  make
 BuildRequires:  pkgconfig
+BuildRequires:  systemd-devel
 
 %description %_description
 
