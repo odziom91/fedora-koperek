@@ -1,4 +1,4 @@
-[![fedora-koperek](https://copr.fedorainfracloud.org/coprs/odziom91/fedora-koperek/gfx/fedora-koperek-transparent-final.png)](https://copr.fedorainfracloud.org/coprs/odziom91/fedora-koperek/)
+[![fedora-koperek](https://raw.githubusercontent.com/odziom91/fedora-koperek/refs/heads/main/gfx/fedora-koperek-transparent-final.png)](https://copr.fedorainfracloud.org/coprs/odziom91/fedora-koperek/)
 
 A personal, unofficial COPR repository for Fedora Linux.
 
