@@ -46,10 +46,11 @@ qmake6 OpenRGB.pro HID_HOTPLUG_ENABLED=1
 %license LICENSE*
 %doc README*
 %{_bindir}/openrgb
-%{_datadir}/applications/*
-%{_datadir}/icons/hicolor/*/apps/*
-%{_datadir}/openrgb/
-%{_udevrulesdir}/*openrgb*.rules
+%{_datadir}/applications/org.openrgb.OpenRGB.desktop
+%{_datadir}/icons/hicolor/128x128/apps/org.openrgb.OpenRGB.png
+%{_datadir}/metainfo/org.openrgb.OpenRGB.metainfo.xml
+%{_prefix}/lib/systemd/system/openrgb.service
+%{_prefix}/lib/tmpfiles.d/openrgb.conf
 
 %changelog
 * Sat Oct 31 2026 fedora-koperek maintainer <noreply@example.invalid> - 1.1-1
