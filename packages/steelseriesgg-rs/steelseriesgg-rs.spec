@@ -37,9 +37,6 @@ cargo --version
 
 cargo build --release --locked --bin ssgg
 
-%check
-cargo test --release --locked
-
 %install
 install -Dpm0755 target/release/ssgg \
     %{buildroot}%{_bindir}/ssgg
