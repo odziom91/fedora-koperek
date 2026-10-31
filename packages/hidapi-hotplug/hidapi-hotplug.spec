@@ -33,8 +33,10 @@ BuildRequires:  systemd-devel
 %files
 %license LICENSE*
 %doc README*
+%{_libdir}/*.so
 %{_libdir}/*.so.*
 %{_libdir}/pkgconfig/*.pc
+%{_libdir}/cmake/hidapi-hotplug/*.cmake
 %{_includedir}/hidapi-hotplug/
 
 %changelog
