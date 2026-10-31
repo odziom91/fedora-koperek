@@ -2,6 +2,7 @@
 OpenRGB is an open-source application for controlling RGB lighting devices
 from different manufacturers.
 }
+%global debug_package %{nil}
 
 Name:           openrgb
 Version:        1.1
