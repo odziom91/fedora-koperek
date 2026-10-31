@@ -34,7 +34,7 @@ Requires:       hidapi-hotplug
 %build
 # OpenRGB uses qmake. The HID hotplug feature must be enabled and linked
 # against the OpenRGB hidapi-hotplug fork.
-%qmake6 OpenRGB.pro HID_HOTPLUG_ENABLED=1
+qmake6 OpenRGB.pro HID_HOTPLUG_ENABLED=1
 %make_build
 
 %install
