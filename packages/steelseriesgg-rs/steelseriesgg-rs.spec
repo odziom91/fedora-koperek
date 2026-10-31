@@ -1,7 +1,7 @@
 
 Name:           steelseriesgg-rs
 Version:        0.1.13
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Open-source SteelSeries GG replacement for Linux
 
 License:        MIT
@@ -12,8 +12,20 @@ BuildRequires:  curl
 BuildRequires:  gcc
 BuildRequires:  systemd-rpm-macros
 
+# GUI
+BuildRequires: gtk3-devel
+BuildRequires: webkit2gtk4.1-devel
+
+# feature - Audio
+# BuildRequires: pulseaudio-libs-devel
+
 Requires:       systemd
 Requires:       systemd-udev
+Requires:       gtk3
+Requires:       webkit2gtk4.1
+
+# feature audio support
+# Requires:       pulseaudio-libs
 
 %description
 Open-source SteelSeries GG replacement for Linux.
@@ -35,11 +47,17 @@ export PATH="$CARGO_HOME/bin:$PATH"
 rustc --version
 cargo --version
 
-cargo build --release --locked --bin ssgg
+cargo build --release --locked --features "desktop sonar" --bin ssgg --bin ssgg-gui
 
 %install
 install -Dpm0755 target/release/ssgg \
     %{buildroot}%{_bindir}/ssgg
+
+install -Dpm0755 target/release/ssgg-gui \
+    %{buildroot}%{_bindir}/ssgg-gui
+
+install -Dpm0644 assets/ssgg-gui.desktop \
+    %{buildroot}%{_datadir}/applications/ssgg-gui.desktop
 
 install -Dpm0644 assets/ssgg.service \
     %{buildroot}%{_userunitdir}/ssgg.service
@@ -51,9 +69,11 @@ install -Dpm0644 assets/70-steelseries.rules \
 %license LICENSE
 %doc README.md
 %{_bindir}/ssgg
+%{_bindir}/ssgg-gui
+%{_datadir}/applications/ssgg-gui.desktop
 %{_userunitdir}/ssgg.service
 %{_udevrulesdir}/70-steelseries.rules
 
 %changelog
-* Sat Oct 31 2026 OdzioM - 0.1.13-1
+* Sat Oct 31 2026 OdzioM - 0.1.13-2
 - Initial package
