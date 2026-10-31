@@ -40,7 +40,7 @@ qmake6 OpenRGB.pro HID_HOTPLUG_ENABLED=1
 %install
 # Upstream's packaging helper generates the install payload. This draft uses
 # the project's standard install target; adjust after checking the build log.
-install -Dpm 0755 openrgb %{buildroot}%{_bindir}/openrgb
+%make_install INSTALL_ROOT=%{buildroot} PREFIX=%{_prefix}
 
 %files
 %license LICENSE*
