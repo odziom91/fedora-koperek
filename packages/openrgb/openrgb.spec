@@ -28,7 +28,8 @@ Requires:       hidapi-hotplug
 %description %_description
 
 %prep
-%autosetup -n OpenRGB-release_1.1
+%setup -q -c -T
+%{__tar} -xzf %{SOURCE0} --strip-components=1
 
 %build
 # OpenRGB uses qmake. The HID hotplug feature must be enabled and linked
