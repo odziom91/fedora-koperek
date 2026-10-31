@@ -21,7 +21,7 @@ BuildRequires:  pkgconfig
 BuildRequires:  qt6-qtbase-devel
 BuildRequires:  qt6-qttools-devel
 BuildRequires:  systemd-rpm-macros
-BuildRequires:  hidapi-hotplug-devel
+BuildRequires:  hidapi-hotplug
 
 Requires:       hidapi-hotplug
 
