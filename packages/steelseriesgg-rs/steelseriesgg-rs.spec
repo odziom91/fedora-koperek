@@ -8,8 +8,8 @@ License:        MIT
 URL:            https://github.com/Ven0m0/steelseriesgg-rs
 Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
 
-BuildRequires:  rust >= 1.99.1
-BuildRequires:  cargo >= 1.99.1
+BuildRequires:  curl
+BuildRequires:  gcc
 BuildRequires:  systemd-rpm-macros
 
 Requires:       systemd
@@ -24,6 +24,17 @@ a GameSense-compatible server.
 %autosetup -n steelseriesgg-rs-%{version}
 
 %build
+export RUSTUP_HOME="%{_builddir}/rustup"
+export CARGO_HOME="%{_builddir}/cargo"
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
+    | sh -s -- -y --profile minimal --default-toolchain stable
+
+export PATH="$CARGO_HOME/bin:$PATH"
+
+rustc --version
+cargo --version
+
 cargo build --release --locked --bin ssgg
 
 %check
