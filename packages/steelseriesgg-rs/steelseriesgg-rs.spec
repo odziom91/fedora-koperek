@@ -8,8 +8,8 @@ License:        MIT
 URL:            https://github.com/Ven0m0/steelseriesgg-rs
 Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
 
-BuildRequires:  cargo
-BuildRequires:  rust
+BuildRequires:  rust >= 1.99.1
+BuildRequires:  cargo >= 1.99.1
 BuildRequires:  systemd-rpm-macros
 
 Requires:       systemd
