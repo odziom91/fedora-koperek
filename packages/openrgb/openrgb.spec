@@ -31,6 +31,7 @@ Requires:       hidapi-hotplug
 %prep
 %setup -q -c -T
 %{__tar} -xzf %{SOURCE0} --strip-components=1
+sed -i 's|^Exec=openrgb$|Exec=env QT_STYLE_OVERRIDE=Fusion openrgb|' qt/org.openrgb.OpenRGB.desktop
 
 %build
 # OpenRGB uses qmake. The HID hotplug feature must be enabled and linked
