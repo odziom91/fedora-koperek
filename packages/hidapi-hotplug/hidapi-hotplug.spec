@@ -35,7 +35,7 @@ BuildRequires:  systemd-devel
 %doc README*
 %{_libdir}/*.so.*
 %{_libdir}/pkgconfig/*.pc
-%{_includedir}/hidapi/
+%{_includedir}/hidapi-hotplug/
 
 %changelog
 * Sat Oct 31 2026 fedora-koperek maintainer <noreply@example.invalid> - 0.15.0-1
