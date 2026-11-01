@@ -1,3 +1,7 @@
+# This .spec file is based on:
+# OpenRGB
+# Project: https://gitlab.com/CalcProgrammer1/OpenRGB
+
 %global _description %{expand:
 OpenRGB is an open-source application for controlling RGB lighting devices
 from different manufacturers.
