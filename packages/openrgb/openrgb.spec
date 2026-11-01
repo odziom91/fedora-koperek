@@ -1,5 +1,6 @@
 # This .spec file is based on:
 # OpenRGB
+# Author: Adam Honse <https://gitlab.com/CalcProgrammer1/>
 # Project: https://gitlab.com/CalcProgrammer1/OpenRGB
 
 %global _description %{expand:
