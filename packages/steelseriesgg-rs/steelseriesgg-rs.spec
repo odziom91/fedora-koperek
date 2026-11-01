@@ -1,7 +1,9 @@
+%define _version 0.1.13
+%define _rpmrel 3
 
 Name:           steelseriesgg-rs
-Version:        0.1.13
-Release:        2%{?dist}
+Version:        %{_version}
+Release:        %{_rpmrel}%{?dist}
 Summary:        Open-source SteelSeries GG replacement for Linux
 
 License:        MIT
