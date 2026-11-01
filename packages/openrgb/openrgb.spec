@@ -3,6 +3,9 @@
 # Author: Adam Honse <https://gitlab.com/CalcProgrammer1/>
 # Project: https://gitlab.com/CalcProgrammer1/OpenRGB
 
+%define _version 1.1
+%define _rpmrel 3
+
 %global _description %{expand:
 OpenRGB is an open-source application for controlling RGB lighting devices
 from different manufacturers.
@@ -10,8 +13,8 @@ from different manufacturers.
 %global debug_package %{nil}
 
 Name:           openrgb
-Version:        1.1
-Release:        1%{?dist}
+Version:        %{_version}
+Release:        %{_rpmrel}%{?dist}
 Summary:        Open source RGB lighting control
 License:        GPL-2.0-only AND GPL-3.0-or-later
 URL:            https://codeberg.org/OpenRGB/OpenRGB
