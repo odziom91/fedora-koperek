@@ -1,6 +1,9 @@
+%define _version 4.2.0
+%define _rpmrel 2
+
 Name:           headsetcontrol
-Version:        4.2.0
-Release:        1%{?dist}
+Version:        %{_version}
+Release:        %{_rpmrel}%{?dist}
 Summary:        Control features of USB gaming headsets
 
 License:        GPL-3.0-only
