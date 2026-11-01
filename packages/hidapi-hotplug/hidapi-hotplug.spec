@@ -1,10 +1,13 @@
+%define _version 0.15.0
+%define _rpmrel 2
+
 %global _description %{expand:
 OpenRGB-maintained HIDAPI fork with device hotplug support.
 }
 
 Name:           hidapi-hotplug
-Version:        0.15.0
-Release:        1%{?dist}
+Version:        %{_version}
+Release:        %{_rpmrel}%{?dist}
 Summary:        HIDAPI fork with hotplug support for OpenRGB
 License:        GPL-3.0-only OR BSD-3-Clause
 URL:            https://codeberg.org/OpenRGB/hidapi-hotplug
