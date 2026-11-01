@@ -1,3 +1,8 @@
+# This .spec file is based on:
+# steelseriesgg-rs
+# Author: Ven0m0 <https://github.com/Ven0m0>
+# Project: https://github.com/Ven0m0/steelseriesgg-rs
+
 %define _version 0.1.13
 %define _rpmrel 3
 

@@ -1,3 +1,8 @@
+# This .spec file is based on:
+# HeadsetControl
+# Author: Denis Arnst <https://github.com/Sapd>
+# Project: https://github.com/Sapd/HeadsetControl
+
 %define _version 4.2.0
 %define _rpmrel 2
 

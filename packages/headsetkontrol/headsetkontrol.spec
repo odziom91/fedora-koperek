@@ -1,3 +1,8 @@
+# This .spec file is based on:
+# HeadsetKontrol
+# Author: Bill Trần <https://github.com/billtran1632001>
+# Project: https://github.com/billtran1632001/HeadsetKontrol
+
 %define _version 2.0.4
 %define _rpmrel 2
 

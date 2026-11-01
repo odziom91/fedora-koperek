@@ -1,3 +1,7 @@
+# This .spec file is based on:
+# hidapi-hotplug
+# Project: https://codeberg.org/OpenRGB/hidapi-hotplug
+
 %define _version 0.15.0
 %define _rpmrel 2
 
