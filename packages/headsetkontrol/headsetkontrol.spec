@@ -1,8 +1,11 @@
+%define _version 2.0.4
+%define _rpmrel 2
+
 %global forgeurl https://gitlab.com/billtran1632001/headsetkontrol
 
 Name:           headsetkontrol
-Version:        2.0.4
-Release:        1%{?dist}
+Version:        %{_version}
+Release:        %{_rpmrel}%{?dist}
 Summary:        Kirigami interface for controlling headsets with HeadsetControl
 
 License:        GPL-3.0-only
