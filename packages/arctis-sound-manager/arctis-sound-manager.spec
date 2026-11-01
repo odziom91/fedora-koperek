@@ -1,3 +1,7 @@
+# This .spec file is based on:
+# Arctis Sound Manager
+# Author: loteran <https://github.com/loteran/>
+# Project: https://github.com/loteran/Arctis-Sound-Manager
 
 Name:           arctis-sound-manager
 Version:        1.7.0
