@@ -4,7 +4,7 @@
 # Project: https://github.com/loteran/Arctis-Sound-Manager
 
 Name:           arctis-sound-manager
-Version:        1.7.1
+Version:        1.7.2
 Release:        1%{?dist}
 Summary:        SteelSeries Arctis headset manager for Linux
 
