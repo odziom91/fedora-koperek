@@ -13,7 +13,7 @@ Summary:        Logitech device settings with a Linux status notifier tray
 License:        MIT AND Apache-2.0 AND 0BSD AND BSD-2-Clause AND BSD-3-Clause AND ISC AND Unicode-3.0 AND Zlib AND CC0-1.0 AND MPL-2.0 AND Unlicense AND bzip2-1.0.6 AND CDLA-Permissive-2.0
 URL:            https://github.com/Pioterr665/OpenLogiTray
 # Generated with prepare-source.py; includes locked, vendored Cargo sources.
-Source0:        openlogi-%{version}.tar.gz
+Source0:        https://github.com/Pioterr665/OpenLogiTray/archive/refs/tags/v%{version}-linuxtray.tar.gz
 BuildRequires:  rust >= 1.99
 BuildRequires:  cargo >= 1.99
 BuildRequires:  gcc-c++
