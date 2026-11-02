@@ -1,6 +1,6 @@
 
 %define _version 0.12.0
-%define _rpmrel 3
+%define _rpmrel 4
 
 %global _description %{expand:
 bpf-linker is a BPF static linker. It links multiple BPF object
@@ -26,6 +26,7 @@ BuildRequires:  llvm-devel
 BuildRequires:  llvm-libs
 BuildRequires:  zlib-devel
 BuildRequires:  clang
+BuildRequires:  chrpath
 
 %description
 %{_description}
@@ -62,6 +63,9 @@ cargo build \
 %install
 install -Dpm0755 target/release/bpf-linker \
     %{buildroot}%{_bindir}/bpf-linker
+
+# Remove the redundant standard RUNPATH.
+chrpath -d %{buildroot}%{_bindir}/bpf-linker
 
 %files
 %license LICENSE-MIT LICENSE-APACHE
