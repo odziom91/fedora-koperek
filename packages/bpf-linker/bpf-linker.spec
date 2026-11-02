@@ -1,6 +1,6 @@
 
 %define _version 0.12.0
-%define _rpmrel 2
+%define _rpmrel 3
 
 %global _description %{expand:
 bpf-linker is a BPF static linker. It links multiple BPF object
@@ -25,6 +25,7 @@ BuildRequires:  tar
 BuildRequires:  llvm-devel
 BuildRequires:  llvm-libs
 BuildRequires:  zlib-devel
+BuildRequires:  clang
 
 %description
 %{_description}
