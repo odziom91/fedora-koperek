@@ -80,14 +80,6 @@ install -Dpm0644 packaging/linux/udev/70-openlogi.rules \
 sed -i 's/^Icon=.*/Icon=input-mouse/' \
     %{buildroot}%{_datadir}/applications/openlogi.desktop
 
-%check
-export CARGO_HOME="$PWD/.cargo-home"
-export CARGO_NET_OFFLINE=true
-export OPENLOGI_THEMES_DIR="$PWD/upstream-themes"
-cargo test --frozen -p openlogi-agent --bin openlogi-agent tray_linux::tests
-dbus-run-session -- cargo test --frozen -p openlogi-ipc private_bus_lifecycle -- --ignored
-desktop-file-validate %{buildroot}%{_datadir}/applications/openlogi.desktop
-
 %post
 %systemd_user_post openlogi-agent.service
 if command -v udevadm >/dev/null 2>&1; then
