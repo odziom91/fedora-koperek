@@ -53,6 +53,11 @@ export CARGO_HOME="$PWD/.cargo-home"
 export CARGO_NET_OFFLINE=true
 export CARGO_INCREMENTAL=0
 export OPENLOGI_THEMES_DIR="$PWD/upstream-themes"
+
+# Faster release build: disable expensive LTO and allow parallel code generation.
+export CARGO_PROFILE_RELEASE_LTO=false
+export CARGO_PROFILE_RELEASE_CODEGEN_UNITS=16
+
 cargo build --release --frozen \
     -p openlogi -p openlogi-desktop -p openlogi-agent -p openlogi-overlay \
     --bin openlogi --bin openlogi-desktop \
