@@ -33,6 +33,7 @@ Requires:       gtksourceview3
 
 %prep
 %autosetup -n DemonEditor-%{_upstream_version}
+sed -i '/^[[:space:]]*update_icon()[[:space:]]*$/d' start.py
 
 %build
 # DemonEditor is a Python application; no compilation is required.
