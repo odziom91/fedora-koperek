@@ -1,4 +1,4 @@
-%define _version 3.15.2-b1
+%define _version 3.15.2~b1
 %define _rpmrel 1
 
 %global _description %{expand:
