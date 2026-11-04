@@ -1,6 +1,6 @@
 %define _version 3.15.2~b1
 %define _upstream_version 3.15.2-b1
-%define _rpmrel 1
+%define _rpmrel 2
 
 %global _description %{expand:
 DemonEditor is an Enigma2 channel and satellite list editor for
@@ -37,12 +37,12 @@ Requires:       gtksourceview3
 
 %install
 install -dpm0755 %{buildroot}%{_datadir}/demon-editor
+install -dpm0755 %{buildroot}%{_bindir}
 
 cp -a app extensions po start.py README.md LICENSE \
     demon-editor.desktop \
     %{buildroot}%{_datadir}/demon-editor/
 
-# Install application launcher.
 cat > %{buildroot}%{_bindir}/demon-editor <<'EOF'
 #!/bin/sh
 cd /usr/share/demon-editor || exit 1
