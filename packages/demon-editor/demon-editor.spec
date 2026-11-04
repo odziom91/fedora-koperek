@@ -19,6 +19,8 @@ Source0:        https://github.com/DYefremov/DemonEditor/archive/refs/tags/%{_up
 
 BuildArch:      noarch
 
+BuildRequires:  desktop-file-utils
+
 Requires:       python3
 Requires:       python3-gobject
 Requires:       python3-cairo
