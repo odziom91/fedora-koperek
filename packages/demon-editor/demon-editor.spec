@@ -1,4 +1,5 @@
 %define _version 3.15.2~b1
+%define _upstream_version 3.15.2-b1
 %define _rpmrel 1
 
 %global _description %{expand:
@@ -14,7 +15,7 @@ Summary:        Enigma2 channel and satellite list editor
 
 License:        MIT
 URL:            https://github.com/DYefremov/DemonEditor
-Source0:        https://github.com/DYefremov/DemonEditor/archive/refs/tags/%{version}.tar.gz
+Source0:        https://github.com/DYefremov/DemonEditor/archive/refs/tags/%{_upstream_version}.tar.gz
 
 BuildArch:      noarch
 
@@ -29,7 +30,7 @@ Requires:       gtksourceview3
 %{_description}
 
 %prep
-%autosetup -n DemonEditor-%{version}
+%autosetup -n DemonEditor-%{_upstream_version}
 
 %build
 # DemonEditor is a Python application; no compilation is required.
