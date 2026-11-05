@@ -3,9 +3,12 @@
 # Author: loteran <https://github.com/loteran/>
 # Project: https://github.com/loteran/Arctis-Sound-Manager
 
+%define _version 1.7.3
+%define _rpmrel 1
+
 Name:           arctis-sound-manager
-Version:        1.7.2
-Release:        1%{?dist}
+Version:        %{_version}
+Release:        %{_rpmrel}%{?dist}
 Summary:        SteelSeries Arctis headset manager for Linux
 
 License:        GPL-3.0-or-later
@@ -275,5 +278,12 @@ udevadm control --reload-rules || :
 /etc/xdg/autostart/asm-first-run.desktop
 
 %changelog
-* Sat Oct 31 2026 Fedora Koperek - 1.7.0-1
+* Sat Oct 31 2026 OdzioM - 1.7.3-1
+- Update to 1.7.3
+- define _version _rpmrel to be easy maintained
+* Sat Oct 31 2026 OdzioM - 1.7.2-1
+- Update to 1.7.2
+* Sat Oct 31 2026 OdzioM - 1.7.1-1
+- Update to 1.7.1
+* Sat Oct 31 2026 OdzioM - 1.7.0-1
 - Initial Fedora Koperek packaging
