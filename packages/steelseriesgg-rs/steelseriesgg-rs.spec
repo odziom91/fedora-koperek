@@ -3,7 +3,7 @@
 # Author: Ven0m0 <https://github.com/Ven0m0>
 # Project: https://github.com/Ven0m0/steelseriesgg-rs
 
-%define _version 0.1.17
+%define _version 0.1.18
 %define _rpmrel 1
 
 Name:           steelseriesgg-rs
@@ -82,6 +82,8 @@ install -Dpm0644 assets/70-steelseries.rules \
 %{_udevrulesdir}/70-steelseries.rules
 
 %changelog
+* Sat Nov 10 2026 OdzioM - 0.1.18-1
+- update to 0.1.18-1
 * Sat Oct 31 2026 OdzioM - 0.1.17-1
 - update to 0.1.17-1
 * Sat Oct 31 2026 OdzioM - 0.1.13-2
