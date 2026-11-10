@@ -3,7 +3,7 @@
 # Author: loteran <https://github.com/loteran/>
 # Project: https://github.com/loteran/Arctis-Sound-Manager
 
-%define _version 1.7.3
+%define _version 1.7.6
 %define _rpmrel 1
 
 Name:           arctis-sound-manager
@@ -278,6 +278,8 @@ udevadm control --reload-rules || :
 /etc/xdg/autostart/asm-first-run.desktop
 
 %changelog
+* Sat Nov 10 2026 OdzioM - 1.7.6-1
+- Update to 1.7.6
 * Sat Oct 31 2026 OdzioM - 1.7.3-1
 - Update to 1.7.3
 - define _version _rpmrel to be easy maintained
