@@ -1,6 +1,6 @@
 
-%define _version 0.12.0
-%define _rpmrel 4
+%define _version 0.13.0
+%define _rpmrel 1
 
 %global _description %{expand:
 bpf-linker is a BPF static linker. It links multiple BPF object
@@ -73,5 +73,7 @@ chrpath -d %{buildroot}%{_bindir}/bpf-linker
 %{_bindir}/bpf-linker
 
 %changelog
-* Mon Nov 02 2026 Koperek Project - 0.12.0-1
+* Mon Nov 10 2026 OdzioM - 0.13.0-1
+- Initial package
+* Mon Nov 02 2026 OdzioM - 0.12.0-1
 - Initial package
