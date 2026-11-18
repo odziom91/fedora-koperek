@@ -1,6 +1,6 @@
 Name:           openttd-citymania
 Version:        15.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        CityMania enhanced client for OpenTTD
 
 License:        GPL-2.0-only AND Zlib AND MIT AND BSL-1.0 AND BSD-2-Clause AND CC0-1.0 AND Apache-2.0 AND Unicode-3.0
@@ -37,7 +37,9 @@ Requires:       hicolor-icon-theme
 CityMania Client is a network-compatible enhanced OpenTTD client,
 providing additional interface tools, zoning overlays, railway building
 features and shortcuts. It is installed alongside the Fedora OpenTTD
-package under its own executable, application launcher and data directory.
+package under its own executable, application launcher and system data directory.
+The client uses the standard OpenTTD user configuration and multiplayer
+identity, including XDG configuration paths.
 
 %prep
 # The official source ZIP may contain either files at archive root or
@@ -54,6 +56,8 @@ fi
 test -f CMakeLists.txt
 
 %build
+# Share the upstream OpenTTD user profile (XDG config/data and multiplayer identity).
+# BINARY_NAME stays distinct for RPM coexistence; PERSONAL_DIR must remain .openttd.
 %cmake \
     -DBINARY_NAME=%{name} \
     -DOPTION_INSTALL_FHS=ON \
@@ -64,7 +68,7 @@ test -f CMakeLists.txt
     -DCMAKE_INSTALL_MANDIR=share/man \
     -DCMAKE_INSTALL_DOCDIR=share/doc/%{name} \
     -DGLOBAL_DIR=%{_datadir}/%{name} \
-    -DPERSONAL_DIR=.openttd-citymania
+    -DPERSONAL_DIR=.openttd
 %cmake_build
 
 %install
@@ -94,6 +98,10 @@ rm -f %{buildroot}%{_docdir}/%{name}/COPYING.md
 %{_docdir}/%{name}/
 
 %changelog
+* Wed Nov 18 2026 Fedora COPR Maintainer - 15.3-2
+- Use standard OpenTTD personal directory for settings and multiplayer identity
+- Keep executable, desktop entry, and system data separate from vanilla OpenTTD
+
 * Wed Nov 18 2026 Fedora COPR - 15.3-1
 - Initial RPM package for CityMania Client 15.3
 - Parallel installation with vanilla OpenTTD
