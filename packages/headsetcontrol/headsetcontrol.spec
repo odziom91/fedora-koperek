@@ -3,8 +3,8 @@
 # Author: Denis Arnst <https://github.com/Sapd>
 # Project: https://github.com/Sapd/HeadsetControl
 
-%define _version 4.2.0
-%define _rpmrel 2
+%define _version 4.3.0
+%define _rpmrel 1
 
 Name:           headsetcontrol
 Version:        %{_version}
@@ -52,5 +52,7 @@ rm -rf %{buildroot}%{_includedir}/headsetcontrol
 %{_udevrulesdir}/70-headsets.rules
 
 %changelog
+* Thu Nov 19 2026 OdzioM - 4.3.0
+- updated to version 4.3.0
 * Thu Jul 23 2026 Denis Arnst <git@sapd.eu> - 4.0.0-1
 - Initial COPR packaging
